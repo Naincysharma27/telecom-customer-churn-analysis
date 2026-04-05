@@ -1,100 +1,211 @@
 # telecom-customer-churn-analysis
 SQL and Power BI based telecom customer churn analysis project with interactive dashboard and business insights.
 
-### Telecom Customer Churn Analysis Dashboard
-Project Overview
 
-This project analyzes customer churn in a telecom company using SQL and Power BI. The goal is to identify patterns, key drivers of churn, and provide actionable insights to improve customer retention.
+### 🚀 Telecom Customer Churn Intelligence Dashboard
 
-Dataset
+## 🔍 Problem Statement
 
-Telecom Customer Churn Dataset
+Customer churn is a direct revenue leak in telecom businesses. This project goes beyond surface-level analysis and focuses on **identifying high-risk customer segments, quantifying churn drivers, and enabling data-driven retention strategies**.
 
-Total Records: 7032 customers
+---
 
-Features include:
+## 📊 Dataset Overview
 
-Customer demographics
+* **Total Customers:** 7,032
+* **Churned Customers:** 1,869
+* **Churn Rate:** 26.6%
 
-Contract type
+### Features Analyzed:
 
-Internet service
+* Demographics (gender, senior citizen, dependents)
+* Subscription details (contract type, tenure)
+* Services (internet, phone, streaming)
+* Billing (monthly charges, total charges)
+* Payment behavior
+* Churn status (target variable)
 
-Payment method
+---
 
-Monthly charges
+## 🧠 Analytical Approach
 
-Churn status
+### 1. Data Processing (SQL - MySQL)
 
-Tools Used
+* Cleaned null values and inconsistent records
+* Created derived features:
 
-SQL (MySQL) – Data analysis
+  * `Tenure Groups`
+  * `Charge Buckets`
+* Aggregated churn rates across multiple dimensions
 
-Power BI – Data visualization and dashboard creation
+### 2. Exploratory Data Analysis
 
-Key Metrics
+* Segment-wise churn breakdown
+* Correlation between pricing, tenure, and churn
+* Behavioral patterns in payment methods
 
-Total Customers: 7032
+### 3. Dashboard Development (Power BI)
 
-Churn Customers: ~1869
+* Built an **interactive churn intelligence dashboard**
+* Drill-down capability across customer segments
+* KPI tracking with dynamic filtering
 
-Churn Rate: ~27%
+---
 
-Dashboard
+## 📈 Key Performance Indicators (KPIs)
 
-(Add your dashboard screenshot here)
+* 📌 Total Customers: 7,032
+* 📌 Churn Rate: 26.6%
+* 📌 Avg Monthly Charges (Churned vs Retained)
+* 📌 Churn by Contract Type
+* 📌 Churn by Payment Method
+* 📌 Revenue Loss Estimation
 
-Key Insights
+---
 
-Month-to-month contracts drive the majority of customer churn
+## 🔥 Critical Insights (Not Surface-Level)
 
-Fiber optic customers show higher churn despite premium pricing
+### 1. Contract Type = Strongest Predictor
 
-Electronic check users are the highest churn risk segment
+* Month-to-month customers dominate churn
+* Long-term contracts act as **natural retention locks**
 
-Customers with higher monthly charges are more likely to churn
+👉 Interpretation:
+This is not preference, it's **commitment friction reduction failure**
 
-Long-term contracts significantly reduce churn probability
+---
 
-Business Recommendations
+### 2. Fiber Optic = High Revenue, High Risk
 
-Encourage customers to switch to long-term contracts with incentives
+* Premium users churn more frequently
 
-Improve service quality or pricing strategy for fiber optic users
+👉 Interpretation:
+You are **overpricing or under-delivering**
+High-paying users have higher expectations and lower tolerance
 
-Promote automatic payment methods to reduce churn risk
+---
 
-Offer retention discounts to high-paying customers
+### 3. Payment Behavior Signals Intent
 
-Target new customers early to reduce early-stage churn
+* Electronic check users show highest churn
 
-Project Workflow
+👉 Interpretation:
+Manual payments = **low engagement + low loyalty**
 
-Imported dataset into MySQL
+---
 
-Performed data analysis using SQL queries
+### 4. Pricing Sensitivity is Non-Linear
 
-Identified churn patterns and trends
+* Higher charges → higher churn
+  BUT only when **value perception is low**
 
-Built interactive dashboard using Power BI
+👉 Interpretation:
+This is not a pricing problem, it's a **value communication problem**
 
-Generated insights and business recommendations
+---
 
-Files Included
+### 5. Early Lifecycle Churn Spike
 
-Dataset (.csv)
+* Customers churn heavily in initial tenure
 
-SQL queries (.sql)
+👉 Interpretation:
+Your onboarding experience is weak
+First 60–90 days = **critical retention window**
 
-Power BI dashboard (.pbix)
+---
 
-Dashboard screenshot
+## 📊 Dashboard Features
 
-Conclusion
+* Dynamic filters (Contract, Payment, Services)
+* Churn segmentation by tenure and charges
+* Revenue impact visualization
+* Drill-through customer-level analysis
+* Clean, minimal, decision-focused UI
 
-This project demonstrates how data analysis and visualization can be used to understand customer behavior and support business decision-making. The insights can help telecom companies reduce churn and improve customer retention strategies.
+---
 
-Author
+## 💡 Business Impact & Recommendations
 
-Naincy Sharma
+### 1. Kill Month-to-Month Dependency
+
+* Push annual/bi-annual plans with discounts
+* Bundle services to increase switching cost
+
+---
+
+### 2. Fix Fiber Optic Strategy
+
+* Improve service quality OR adjust pricing
+* Add premium support for high-value users
+
+---
+
+### 3. Automate Payments Aggressively
+
+* Incentivize auto-pay adoption
+* Penalize friction-heavy payment methods
+
+---
+
+### 4. Target High-Risk Customers Early
+
+* Build churn prediction signals using:
+
+  * Tenure < 3 months
+  * High monthly charges
+  * Electronic payment usage
+
+---
+
+### 5. Retention > Acquisition
+
+* It is cheaper to retain than acquire
+* Focus on **lifetime value optimization**
+
+---
+
+## ⚙️ Tech Stack
+
+* **SQL (MySQL):** Advanced querying, segmentation, feature engineering
+* **Power BI:** Interactive dashboards, DAX measures, storytelling
+
+---
+
+## 🔄 Project Workflow
+
+1. Data ingestion and cleaning (SQL)
+2. Feature engineering and segmentation
+3. Exploratory data analysis
+4. Dashboard design (Power BI)
+5. Insight extraction and business translation
+
+---
+
+## 📂 Deliverables
+
+* Dataset (.csv)
+* SQL scripts (.sql)
+* Power BI Dashboard (.pbix)
+* Dashboard preview image
+
+---
+
+## 🧾 Conclusion
+
+This is not just a dashboard project.
+This is a **decision-support system** that translates raw telecom data into **revenue-saving actions**.
+
+If implemented correctly, these insights can:
+
+* Reduce churn rate significantly
+* Improve customer lifetime value
+* Optimize pricing and engagement strategies
+
+---
+
+## 👤 Author
+
+
+
+**Naincy Sharma**
 LinkedIn: https://www.linkedin.com/in/naincy-sharma27
